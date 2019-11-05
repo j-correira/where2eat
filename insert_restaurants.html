@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-extensions@4.0.0/dist/css/bulma-extensions.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+#navo a {
+  color:white;
+}
+
+#navo a:visited { color: white; }
+#navo a:hover { color: white }
+#navo a:active { color: white }
+
+.locationButtons {
+  background-color:#3498db;
+}
+
+.greySelect {
+  color:gray;
+}
+
+.greenOutline {
+  border:1px solid #48c774;
+  color: #48c774;
+}
+
+.marginTop10 {
+  margin-top: 14px;
+}
+
+.marginTop23 {
+  margin-top: 19px;
+}
+
+.fa-1x {
+    font-size: 1.9rem;
+}
+
+.fa-3x {
+    font-size: 2.5em;
+}
+
+.emUp {
+  font-size:1.6em;
+}
+
+
+.radios input[type=radio] {
+    display:none
+}
+
+.radios2 input[type=radio] {
+    display:none
+}
+
+.radios .radio {
+    background-color: none;
+    border:1px solid #48c774;
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    color:#48c774;
+}
+
+.radios input[type=radio]:checked + .radio {
+    background-color: #48c774;
+    color:white;
+}
+
+
+.radios2 .radio-rating {
+    border:1px solid #ffd52a;
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    color:#ffd52a;
+}
+
+.radios2 input[type=radio]:checked + .radio-rating {
+    background-color: #ffd52a;
+    color:white;
+}
+
+.radios input[type=radio] {
+    display: none;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+/* //////////////////// remove gaps in mobile //////////////////// */
+/* removes gap on right in mobile safari */
+*{
+    box-sizing: border-box
+}
+.columns,
+.columns:last-child {
+    margin: 0
+}
+
+
+/* removes gap on right in mobile chrome */
+::-webkit-scrollbar {
+display: none;
+}
+/* //////////////////// remove gaps in mobile //////////////////// */
+/* /////////////////////////////////////////////////////////////// */
+
+</style>
+
+
+
+  </head>
+  <body>
+
+<!-- ////////////////////////////////////////////// -->
+<!-- //////////////////// hero //////////////////// -->
+      <section class="hero" style="background-color:#3273dc;">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-1" style="color:white;">
+              Randomly Generated Restaurants
+            </h1>
+            <h2 class="subtitle" style="color:white;">Less time deciding, more time eating.</h2>
+          </div>
+        </div>
+      </section>
+<!-- //////////////////// hero //////////////////// -->
+<!-- ////////////////////////////////////////////// -->
+
+
+<!-- ////////////////////////////////////////////// -->
+<!-- //////////////////// nav //////////////////// -->
+      <div id="navo" class="columns is-mobile">
+
+          <div class="column is-one-third has-text-centered is-fullwidth" style="background-color:#d63031; color:white;">
+              <a class="" href="#location" style="display:block; width:100%;">
+                <i class="marginTop20 fas fa-map-marker-alt fa-3x"></i>
+              </a>
+            </div>
+      
+        <div class="column is-one-third has-text-centered is-fullwidth" style="background-color:#48c774; color:white;">
+          <a class="" href="#price" style="display:block; width:100%;">
+            <i class="marginTop20 fas fa-dollar-sign fa-3x"></i>
+          </a>
+        </div>
+
+
+        <div class="column is-one-third has-text-centered is-fullwidth" style="background-color:#ffd52a; color:white;">
+            <a class="" href="#rating" style="display:block; width:100%;">
+              <i class="marginTop20 fas fa-star fa-3x"></i>
+            </a>
+          </div>
+
+      </div>
+<!-- //////////////////// nav //////////////////// -->
+<!-- ///////////////////////////////////////////// -->
+
+
+      <section class="section" style="padding-bottom: 0px;padding-top: 35px;">
+        <div class="container">
+          <button class="button is-large is-fullwidth" style="color:white; font-size:2rem; font-weight: 600; background-color:#3273dc;">I'm
+            hungry</button>
+      </div>
+      </section>
+
+
+<!-- ////////////////////////////////////////////////// -->
+<!-- //////////////////// location //////////////////// -->
+
+<!-- ////////////////////////////////////////////// -->
+<!-- //////////////////// hero //////////////////// -->
+<section id="location" class="hero" style="background-color:#d63031; margin-top:40px;">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" style="color:white;">Generate by Location</h1>
+      </div>
+    </div>
+  </section>
+<!-- //////////////////// hero //////////////////// -->
+<!-- ////////////////////////////////////////////// -->
+
+
+  <section class="section" style="padding-top: 35px;">
+    <div class="container">
+
+  
+      <div class="columns" style="margin-bottom:0px;">
+        <div class="column is-half">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#d63031; color:white; font-size:2rem; font-weight: 600; ">Mystic</button>
+  
+        </div>
+  
+        <div class="column is-half">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#d63031; color:white; font-size:2rem; font-weight: 600; ">Groton</button>
+  
+        </div>
+      </div>
+  
+      <div class="columns" style="margin-bottom:0px;">
+        <div class="column is-half">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#d63031; color:white; font-size:2rem; font-weight: 600; ">Westerly</button>
+  
+        </div>
+  
+        <div class="column is-half">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#d63031; color:white; font-size:2rem; font-weight: 600; ">New London</button>
+  
+        </div>
+      </div>
+  
+      <div class="columns" style="margin-bottom:0px;">
+        <div class="column is-half">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#d63031; color:white; font-size:2rem; font-weight: 600; ">Foxwoods</button>
+  
+        </div>
+  
+        <div class="column is-half">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#d63031; color:white; font-size:2rem; font-weight: 600; ">Mohegan Sun</button>
+  
+        </div>
+      </div>
+  
+    </div><!-- /container -->
+  </section>
+<!-- //////////////////// location //////////////////// -->
+<!-- ////////////////////////////////////////////////// -->
+
+
+<!-- /////////////////////////////////////////////// -->
+<!-- //////////////////// price //////////////////// -->
+
+
+<!-- ////////////////////////////////////////////// -->
+<!-- //////////////////// hero //////////////////// -->
+<section id="price" class="hero" style="background-color:#48c774; margin-top:40px;">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" style="color:white;">Generate by Price</h1>
+      </div>
+    </div>
+  </section>
+<!-- //////////////////// hero //////////////////// -->
+<!-- ////////////////////////////////////////////// -->
+
+
+<section class="section">
+  <div class="container">
+
+
+
+
+    <div class="columns">
+
+      <div class="column is-one-third has-text-centered">
+
+        <button class="button is-large is-success is-fullwidth" style=" color:white;">
+          <i class="fas fa-dollar-sign emUp"></i>
+        </button>
+
+      </div>
+
+      <div class="column is-one-third has-text-centered">
+
+        <button class="button is-large is-success is-fullwidth" style=" color:white;">
+          <i class="fas fa-dollar-sign emUp"></i><i class="fas fa-dollar-sign emUp"></i>
+        </button>
+
+      </div>
+
+      <div class="column is-one-third has-text-centered">
+
+        <button class="button is-large is-success is-fullwidth" style=" color:white;">
+          <i class="fas fa-dollar-sign emUp"></i><i class="fas fa-dollar-sign emUp"></i><i
+            class="fas fa-dollar-sign emUp"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div><!-- /container -->
+</section>
+<!-- //////////////////// price //////////////////// -->
+<!-- /////////////////////////////////////////////// -->
+
+
+<!-- //////////////////////////////////////////////// -->
+<!-- //////////////////// rating //////////////////// -->
+
+
+<!-- ////////////////////////////////////////////// -->
+<!-- //////////////////// hero //////////////////// -->
+<section id="rating" class="hero" style="background-color:#ffd52a; margin-top:40px;">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" style="color:white;">Generate by Rating</h1>
+      </div>
+    </div>
+  </section>
+<!-- //////////////////// hero //////////////////// -->
+<!-- ////////////////////////////////////////////// -->
+
+
+<section class="section">
+  <div class="container">
+
+    <div class="columns">
+
+      <div class="column is-one-fifth has-text-centered">
+
+        <button class="button is-large is-fullwidth" style="background-color:#ffd52a; color:white;">
+          <i class=" fas fa-star fa-1x"></i>
+        </button>
+
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+
+        <button class="button is-large is-fullwidth" style="background-color:#ffd52a; color:white;">
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+        </button>
+
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+
+        <button class="button is-large is-fullwidth" style="background-color:#ffd52a; color:white;">
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+        </button>
+
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+
+        <button class="button is-large is-fullwidth" style="background-color:#ffd52a; color:white;">
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+        </button>
+
+      </div>
+
+      <div class="column is-one-fifth has-text-centered">
+
+        <button class="button is-large is-fullwidth" style="background-color:#ffd52a; color:white;">
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+          <i class=" fas fa-star fa-1x"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div><!-- /container -->
+</section>
+<!-- //////////////////// rating //////////////////// -->
+<!-- //////////////////////////////////////////////// -->
+
+
+<!-- ///////////////////////////////////////////////////////////// -->
+<!-- /////////////////// adding to database ////////////////////// -->
+    <form action="#">
+
+      <section class="hero" style="background-color:#3273dc; margin-top:40px;">
+          <div class="hero-body">
+            <div class="container" >
+              <h1 class="title" style="color:white;">
+                Add a Restaurant to the Database
+              </h1>
+              <h2 class="subtitle" style="color:white;">
+                Fill in restaurant name, website, location, price and rating
+              </h2>
+            </div>
+          </div>
+        </section>
+
+
+  <section class="section">
+    <div class="container">
+  
+  
+  
+  
+      <h1 class="title">Restaurant Info</h1>
+  
+      <div class="field">
+        <div class="control">
+          <input required class="input is-success is-large" type="text" placeholder="Restaurant Name">
+        </div>
+      </div>
+  
+      <div class="field">
+        <div class="control">
+          <input required class="input is-success is-large" type="text" placeholder="Restaurant Website">
+        </div>
+      </div>
+  
+  
+      <div class="select is-success is-large is-fullwidth">
+        <select required>
+          <option selected disabled value="" selected hidden>Location</option>
+          <option value="Mystic">Mystic</option>
+          <option value="Groton">Groton</option>
+          <option value="Westerly">Westerly</option>
+          <option value="New London">New London</option>
+          <option value="Mohegan Sun">Mohegan Sun</option>
+          <option value="Foxwoods">Foxwoods</option>
+        </select>
+      </div>
+  
+  
+  
+  
+    </div><!-- /container -->
+  
+  
+  
+  
+  
+  
+  
+  
+    </div>
+  
+    <div class="container" style="margin-top:40px;">
+  
+      <h1 class="title">Price</h1>
+  
+      <div class="radios">
+        <div class="columns">
+  
+          <div class="column is-one-third has-text-centered">
+            <input type="radio" name="price" value="1" id="p1" />
+            <label class="radio" for="p1"><i class="marginTop10 fas fa-dollar-sign fa-3x"></i></label>
+          </div>
+  
+          <div class="column is-one-third has-text-centered" style="">
+            <input type="radio" name="price" value="2" id="p2" />
+            <label class="radio" for="p2"><i class="marginTop10 fas fa-dollar-sign fa-3x"></i> <i
+                class="marginTop20 fas fa-dollar-sign fa-3x"></i></label>
+          </div>
+  
+          <div class="column is-one-third has-text-centered">
+            <input type="radio" name="price" value="3" id="p3" />
+            <label class="radio" for="p3"><i class="marginTop10 fas fa-dollar-sign fa-3x"></i> <i
+                class="marginTop20 fas fa-dollar-sign fa-3x"></i> <i
+                class="marginTop20 fas fa-dollar-sign fa-3x"></i></label>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+  
+    <div class="container" style="margin-top:40px;">
+  
+      <h1 class="title">Rating</h1>
+  
+      <div class="radios2">
+        <div class="columns">
+  
+          <div class="column is-one-fifth has-text-centered">
+            <input type="radio" name="rating" value="1" id="r1" />
+            <label class="radio-rating" for="r1"><i class="marginTop23 fas fa-star fa-1x"></i> </label>
+          </div>
+  
+          <div class="column is-one-fifth has-text-centered" style="">
+            <input type="radio" name="rating" value="2" id="r2" />
+            <label class="radio-rating" for="r2"><i class="marginTop23 fas fa-star fa-1x"></i> <i
+                class="marginTop23 fas fa-star fa-1x"></i> </label>
+          </div>
+  
+          <div class="column is-one-fifth has-text-centered">
+            <input type="radio" name="rating" value="3" id="r3" />
+            <label class="radio-rating" for="r3"><i class="marginTop23 fas fa-star fa-1x"></i> <i
+                class="marginTop23 fas fa-star fa-1x"></i> <i class="marginTop23 fas fa-star fa-1x"></i> </label>
+          </div>
+  
+          <div class="column is-one-fifth has-text-centered">
+            <input type="radio" name="rating" value="4" id="r4" />
+            <label class="radio-rating" for="r4"><i class="marginTop23 fas fa-star fa-1x"></i> <i
+                class="marginTop23 fas fa-star fa-1x"></i> <i class="marginTop23 fas fa-star fa-1x"></i> <i
+                class="marginTop23 fas fa-star fa-1x"></i> </label>
+          </div>
+  
+          <div class="column is-one-fifth has-text-centered">
+            <input type="radio" name="rating" value="5" id="r5" />
+            <label class="radio-rating" for="r5"><i class="marginTop23 fas fa-star fa-1x"></i> <i
+                class="marginTop23 fas fa-star fa-1x"></i> <i class="marginTop23 fas fa-star fa-1x"></i> <i
+                class="marginTop23 fas fa-star fa-1x"></i> <i class="marginTop23 fas fa-star fa-1x"></i> </label>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="container" style="margin-top:40px;">
+  
+      <div class="columns">
+        <div class="column">
+  
+          <button class="button is-large is-fullwidth"
+            style="background-color:#3498db; color:white; font-size:2rem; font-weight: 600; ">Submit</button>
+  
+        </div>
+      </div>
+  
+    </div>
+  
+  
+  
+    </div>
+  </section>
+
+</form>
+<!-- /////////////////// adding to database ////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////// -->
+
+
+  </body>
+</html>
